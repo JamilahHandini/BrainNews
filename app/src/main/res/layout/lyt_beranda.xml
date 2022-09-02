@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_main"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_spinner"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.945"
+        >
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_spinner"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.787"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.945" />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:id="@+id/bg_category"
+        android:layout_width="163dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_category"
+        app:layout_constraintBottom_toTopOf="@+id/bg_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/head_line_n"
+        android:layout_width="135dp"
+        android:layout_height="74dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="top"
+        android:lineSpacingExtra="-9sp"
+        android:text="Head Line News"
+        android:textColor="#CCFFFFFF"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <TextView
+        android:id="@+id/your_bookma"
+        android:layout_width="103dp"
+        android:layout_height="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="right|top"
+        android:text="Your Bookmark"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_category"
+        app:layout_constraintEnd_toStartOf="@+id/ic_bookmark"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
+
+    <ImageButton
+        android:id="@+id/ic_bookmark"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_bookmark"
+        android:clipToOutline="true"
+        android:onClick="openBookmark"
+        app:layout_constraintBottom_toTopOf="@+id/bg_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <View
+        android:id="@+id/bg_search"
+        android:layout_width="308dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="283dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal|top"
+
+        android:textColor="#4D000000"
+        android:textSize="4sp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_search"
+        app:layout_constraintEnd_toEndOf="@+id/bg_search"
+        app:layout_constraintStart_toStartOf="@+id/bg_search"
+        app:layout_constraintTop_toTopOf="@+id/bg_search"
+        app:layout_constraintVertical_bias="1.0"
+        app:queryHint="search" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_main_rv"
+            android:layout_width="412dp"
+            android:layout_height="600dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bg_search"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_main"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:id="@+id/bg_back"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_back"
+        app:layout_constraintBottom_toTopOf="@+id/bg_konten"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/ant_design_"
+        android:layout_width="32dp"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/arrow_bookmark"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_back"
+        app:layout_constraintEnd_toEndOf="@+id/bg_back"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="@+id/bg_back"
+        app:layout_constraintTop_toTopOf="@+id/bg_back"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <View
+        android:id="@+id/bg_konten"
+        android:layout_width="333dp"
+        android:layout_height="568dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_konten"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" />
+
+    <View
+        android:id="@+id/bg_url"
+        android:layout_width="271dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_url"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_konten"
+        app:layout_constraintEnd_toEndOf="@+id/bg_konten"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toTopOf="@+id/bg_konten"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/url_berita"
+        android:layout_width="130dp"
+        android:layout_height="14dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Url Berita"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_konten"
+        app:layout_constraintEnd_toEndOf="@+id/bg_url"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/bg_url"
+        app:layout_constraintTop_toTopOf="@+id/bg_konten"
+        app:layout_constraintVertical_bias="0.941" />
+
+    <ImageView
+        android:id="@+id/ic_bookmark"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_bookmark"
+        android:clipToOutline="true"
+        app:layout_constraintStart_toEndOf="@+id/nama_publisher"
+        app:layout_constraintTop_toTopOf="@+id/bg_konten" />
+
+    <TextView
+        android:id="@+id/nama_publisher"
+        android:layout_width="109dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Nama Publisher Berita"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_konten"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toTopOf="@+id/bg_konten"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="321dp"
+        android:layout_height="157dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/url_berita"
+        app:layout_constraintEnd_toEndOf="@+id/bg_konten"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toTopOf="@+id/bg_konten"
+        app:layout_constraintVertical_bias="0.146">
+
+        <ImageView
+            android:id="@+id/foto_konten"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:src="@drawable/contoh_foto" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Author"
+        app:layout_constraintBottom_toTopOf="@+id/bg_url"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="272dp"
+        android:gravity="top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Tanggal"
+        app:layout_constraintBottom_toTopOf="@+id/bg_url"
+        app:layout_constraintEnd_toEndOf="@+id/bg_konten"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/author" />
+
+    <TextView
+        android:id="@+id/judul_berita"
+        android:layout_width="270dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/montserrat_subrayada_bold"
+        android:gravity="top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Judul Berita"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_url"
+        app:layout_constraintEnd_toEndOf="@+id/bg_konten"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <TextView
+        android:id="@+id/isi_konten"
+        android:layout_width="272dp"
+        android:layout_height="247dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="top"
+        android:lineSpacingExtra="-1sp"
+        android:text="Isi Konten"
+        android:textColor="#99000000"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_url"
+        app:layout_constraintEnd_toEndOf="@+id/bg_konten"
+        app:layout_constraintStart_toStartOf="@+id/bg_konten"
+        app:layout_constraintTop_toBottomOf="@+id/judul_berita" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
